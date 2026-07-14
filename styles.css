@@ -1,0 +1,252 @@
+/* Estilo moderno y profesional para Astibitxa.com con estética de naturaleza y caza */
+:root {
+  --bg: #07120d;
+  --surface: #102417;
+  --surface-strong: #183b22;
+  --text: #f5f0e6;
+  --text-muted: #cfdcc1;
+  --accent: #7bc96f;
+  --accent-strong: #2f7d32;
+  --accent-soft: rgba(123, 201, 111, 0.16);
+  --border: rgba(255, 255, 255, 0.1);
+  --radius: 24px;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(123, 201, 111, 0.22), transparent 30%),
+    radial-gradient(circle at 85% 10%, rgba(89, 140, 72, 0.2), transparent 22%),
+    linear-gradient(135deg, #07120d 0%, #11261a 45%, #173924 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 3rem 0 2rem;
+}
+
+.header__intro {
+  max-width: 640px;
+}
+
+.header__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(123, 201, 111, 0.12);
+  border: 1px solid rgba(123, 201, 111, 0.24);
+  color: var(--accent);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+.header__title {
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: -0.03em;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.header__subtitle {
+  margin: 1.5rem 0 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.header__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.15rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.hero-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(16, 34, 20, 0.95), rgba(7, 18, 13, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(123, 201, 111, 0.22), transparent 30%);
+  pointer-events: none;
+}
+
+.hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 420px;
+  filter: saturate(1.08) contrast(1.02);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  background: linear-gradient(180deg, transparent 45%, rgba(6, 17, 11, 0.86) 100%);
+}
+
+.hero-overlay__title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  letter-spacing: 0.02em;
+}
+
+.hero-overlay__text {
+  margin: 0.75rem 0 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+.section {
+  margin-top: 3.5rem;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(16, 36, 23, 0.94), rgba(11, 24, 15, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  color: #f7f3df;
+}
+
+.section p,
+.section li {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.8rem;
+}
+
+.feature-card {
+  padding: 1.6rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(123, 201, 111, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  font-size: 1.08rem;
+  color: #f7f3df;
+}
+
+.feature-card p {
+  margin: 0.9rem 0 0;
+}
+
+.footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(123, 201, 111, 0.2);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 900px) {
+  .header {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .header__intro {
+    margin-right: 2rem;
+  }
+
+  .hero-card {
+    min-height: 560px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-top: 1.8rem;
+  }
+
+  .section {
+    padding: 1.6rem;
+  }
+
+  .header__eyebrow,
+  .badge,
+  .hero-overlay {
+    font-size: 0.95rem;
+  }
+}
